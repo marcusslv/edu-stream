@@ -22,48 +22,7 @@ class VideoAdministratorCreateCategoryTest extends TestCase
         $this->seed(RolesSeeder::class);
     }
 
-    /**
-     * A basic feature test example.
-     */
-    public function test_if_video_administrator_can_create_category(): void
-    {
-        // Arrange
-        Event::fake();
-        $videoAdministrator = User::factory()->create();
-        $subscriptionAdministrator = User::factory()->create();
-        $videoAdministrator->assignRole(RolesEnum::VIDEO_ADMINISTRATOR->value);
-        $videoAdministratorToken = $videoAdministrator->createToken('admin_token')->plainTextToken;
-        $subscriptionAdministratorToken = $subscriptionAdministrator->createToken('admin_token')->plainTextToken;
-
-        // Act
-        $response = $this->withHeader('Authorization', "Bearer $videoAdministratorToken")
-            ->postJson('/api/admin/categories', [
-            'name' => 'Category Test',
-            'description' => 'Description Test',
-        ]);
-
-        // Assert
-        $response->assertStatus(200);
-        $response->assertJson([
-            'type' => 'success',
-            'status' => 200,
-            'message' => 'Operação realizada com com sucesso',
-            'show' => true,
-            'response' => [
-                "name" => "Category Test",
-                "description" => "Description Test"
-            ]
-        ]);
-
-        $this->assertDatabaseHas('categories', [
-            'name' => 'Category Test',
-            'description' => 'Description Test'
-        ]);
-
-        Event::assertDispatched(CategoryCreated::class);
-    }
-
-    public function test_if_subscription_administrator_cannot_create_category(): void
+    public function test_if_other_administrator_cannot_create_category(): void
     {
         // Arrange
         $subscriptionAdministrator = User::factory()->create();
@@ -110,5 +69,73 @@ class VideoAdministratorCreateCategoryTest extends TestCase
             'name' => 'Category Test',
             'description' => 'Description Test'
         ]);
+    }
+
+    public function test_if_video_administrator_can_create_category(): void
+    {
+        // Arrange
+        Event::fake();
+        $videoAdministrator = User::factory()->create();
+        $videoAdministrator->assignRole(RolesEnum::VIDEO_ADMINISTRATOR->value);
+        $videoAdministratorToken = $videoAdministrator->createToken('admin_token')->plainTextToken;
+
+        // Act
+        $response = $this->withHeader('Authorization', "Bearer $videoAdministratorToken")
+            ->postJson('/api/admin/categories', [
+                'name' => 'Category Test',
+                'description' => 'Description Test',
+            ]);
+
+        // Assert
+        $response->assertStatus(200);
+        $response->assertJson([
+            'type' => 'success',
+            'status' => 200,
+            'message' => 'Operação realizada com com sucesso',
+            'show' => true,
+            'response' => [
+                "name" => "Category Test",
+                "description" => "Description Test"
+            ]
+        ]);
+
+        $this->assertDatabaseHas('categories', [
+            'name' => 'Category Test',
+            'description' => 'Description Test'
+        ]);
+
+        Event::assertDispatched(CategoryCreated::class);
+    }
+
+    public function test_if_video_administrator_can_create_category_with_invalid_data(): void
+    {
+        // Arrange
+        Event::fake();
+        $videoAdministrator = User::factory()->create();
+        $videoAdministrator->assignRole(RolesEnum::VIDEO_ADMINISTRATOR->value);
+        $videoAdministratorToken = $videoAdministrator->createToken('admin_token')->plainTextToken;
+
+        // Act
+        $response = $this->withHeader('Authorization', "Bearer $videoAdministratorToken")
+            ->postJson('/api/admin/categories', [
+                'name' => '',
+                'description' => '',
+            ]);
+
+        // Assert
+        $response->assertStatus(422);
+        $response->assertJson([
+            'type' => 'error',
+            'status' => 422,
+            'message' => 'Ops',
+            'show' => true,
+            'errors' => [
+                "name" => ["The name field is required."],
+            ]
+        ]);
+
+        $this->assertDatabaseCount('categories', 0);
+
+        Event::assertNotDispatched(CategoryCreated::class);
     }
 }

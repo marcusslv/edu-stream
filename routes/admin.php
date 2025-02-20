@@ -9,10 +9,10 @@ Route::apiResource('categories', CategoryController::class, [
     'middleware' => ['role:video_administrator', 'auth:sanctum']
 ]);
 Route::apiResource('genres', GenreController::class, [
-    'middleware' => ['role:video_administrator']
+    'middleware' => ['role:video_administrator', 'auth:sanctum']
 ]);
 Route::apiResource('cast-members', CastMemberController::class, [
-    'middleware' => ['role:video_administrator']
+    'middleware' => ['auth:sanctum', 'role:video_administrator']
 ]);
 Route::apiResource('videos', VideoController::class, [
     'middleware' => ['role:video_administrator']

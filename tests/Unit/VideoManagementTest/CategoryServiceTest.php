@@ -1,24 +1,15 @@
 <?php
 
-namespace Tests\Unit;
+namespace Tests\Unit\VideoManagementTest;
 
 use App\Domains\VideoManagement\Category\Entities\CategoryEntity;
 use App\Domains\VideoManagement\Category\Repositories\CategoryRepository;
 use App\Domains\VideoManagement\Category\Services\CategoryService;
-use App\Events\CategoryCreated;
 use Mockery;
 use PHPUnit\Framework\TestCase;
 
 class CategoryServiceTest extends TestCase
 {
-    /**
-     * A basic unit test example.
-     */
-    public function test_example(): void
-    {
-        $this->assertTrue(true);
-    }
-
     public function test_if_create_category_with_success()
     {
         $repositoryMock = Mockery::mock(CategoryRepository::class);
