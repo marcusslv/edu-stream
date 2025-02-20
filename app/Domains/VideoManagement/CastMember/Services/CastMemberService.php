@@ -1,0 +1,28 @@
+<?php
+
+namespace App\Domains\VideoManagement\CastMember\Services;
+
+use App\Domains\Abstracts\AbstractService;
+use App\Domains\VideoManagement\CastMember\Repositories\CastMemberRepository;
+use App\Events\CastMemberCreated;
+use App\Events\CastMemberUpdated;
+
+class CastMemberService extends AbstractService
+{
+    public function __construct(CastMemberRepository $repository)
+    {
+        $this->repository = $repository;
+    }
+
+    public function afterSave($entity, $params)
+    {
+        event(new CastMemberCreated($entity, $params));
+
+        return $entity;
+    }
+
+    public function afterUpdate($entity, $params): void
+    {
+        event(new CastMemberUpdated($entity, $params));
+    }
+}
