@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domains\Enums;
+namespace App\Domains\VideoManagement\Enums;
 
 use App\Domains\Abstracts\EnumInterface;
 use App\Domains\Abstracts\Traits\EnumTrait;

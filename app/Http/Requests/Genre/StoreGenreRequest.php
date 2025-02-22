@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests\Genre;
 
-use App\Domains\Enums\RolesEnum;
+use App\Domains\User\Enums\RolesEnum;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreGenreRequest extends FormRequest

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Domains\ManagementSubscriptions\Subscription\Services;
+namespace App\Domains\SubscriptionManagement\Subscription\Services;
 
 use App\Domains\Abstracts\AbstractService;
-use App\Domains\ManagementSubscriptions\Subscription\Repositories\SubscriptionRepository;
+use App\Domains\SubscriptionManagement\Subscription\Repositories\SubscriptionRepository;
 use App\Events\SubscriptionStarted;
 
 class SubscriptionService extends AbstractService

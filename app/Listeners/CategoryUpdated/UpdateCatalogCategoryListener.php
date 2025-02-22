@@ -2,11 +2,9 @@
 
 namespace App\Listeners\CategoryUpdated;
 
-use App\Domains\Catalog\Services\CatalogService;
+use App\Domains\VideoCatalog\Catalog\Services\CatalogService;
 use App\Domains\VideoManagement\Category\Entities\CategoryEntity;
 use App\Events\CategoryUpdated;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Queue\InteractsWithQueue;
 
 class UpdateCatalogCategoryListener
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domains\Catalog\Entities;
+namespace App\Domains\VideoCatalog\Catalog\Entities;
 
 use App\Domains\VideoManagement\Video\Entities\VideoEntity;
 use App\Models\Catalog;

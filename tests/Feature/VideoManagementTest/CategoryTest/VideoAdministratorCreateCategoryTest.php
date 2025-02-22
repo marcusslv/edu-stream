@@ -2,7 +2,7 @@
 
 namespace Tests\Feature\VideoManagementTest\CategoryTest;
 
-use App\Domains\Enums\RolesEnum;
+use App\Domains\User\Enums\RolesEnum;
 use App\Events\CategoryCreated;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;

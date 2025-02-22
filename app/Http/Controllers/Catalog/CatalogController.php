@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Catalog;
 
+use App\Domains\VideoCatalog\Catalog\Services\CatalogService;
 use App\Http\Controllers\AbstractController;
-use App\Domains\Catalog\Services\CatalogService;
 
 
 class CatalogController extends AbstractController

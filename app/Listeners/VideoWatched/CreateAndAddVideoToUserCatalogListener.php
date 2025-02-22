@@ -2,10 +2,8 @@
 
 namespace App\Listeners\VideoWatched;
 
-use App\Domains\Catalog\Services\CatalogService;
+use App\Domains\VideoCatalog\Catalog\Services\CatalogService;
 use App\Events\VideoWatched;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Queue\InteractsWithQueue;
 
 class CreateAndAddVideoToUserCatalogListener
 {

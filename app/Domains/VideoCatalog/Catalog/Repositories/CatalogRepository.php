@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Domains\Catalog\Repositories;
+namespace App\Domains\VideoCatalog\Catalog\Repositories;
 
-use App\Domains\Catalog\Entities\CatalogEntity;
 use App\Domains\Abstracts\AbstractRepository;
+use App\Domains\VideoCatalog\Catalog\Entities\CatalogEntity;
 
 class CatalogRepository extends AbstractRepository
 {

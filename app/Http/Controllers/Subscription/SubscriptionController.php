@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Subscription;
 
-use App\Domains\ManagementSubscriptions\Subscription\Services\SubscriptionService;
+use App\Domains\SubscriptionManagement\Subscription\Services\SubscriptionService;
 use App\Http\Controllers\AbstractController;
 
 

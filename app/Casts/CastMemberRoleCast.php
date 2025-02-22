@@ -2,7 +2,7 @@
 
 namespace App\Casts;
 
-use App\Domains\Enums\CastMemberRoleEnum;
+use App\Domains\VideoManagement\Enums\CastMemberRoleEnum;
 use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
 use Illuminate\Database\Eloquent\Model;
 

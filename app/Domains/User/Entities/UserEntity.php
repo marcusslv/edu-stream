@@ -2,7 +2,7 @@
 
 namespace App\Domains\User\Entities;
 
-use App\Domains\ManagementSubscriptions\Subscription\Entities\SubscriptionEntity;
+use App\Domains\SubscriptionManagement\Subscription\Entities\SubscriptionEntity;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;

@@ -2,7 +2,7 @@
 
 namespace App\Policies;
 
-use App\Domains\ManagementSubscriptions\Subscription\Entities\SubscriptionEntity;
+use App\Domains\SubscriptionManagement\Subscription\Entities\SubscriptionEntity;
 use App\Domains\User\Entities\UserEntity;
 
 class UserPolicy

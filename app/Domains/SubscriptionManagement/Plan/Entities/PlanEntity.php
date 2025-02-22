@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Domains\ManagementSubscriptions\Plan\Entities;
+namespace App\Domains\SubscriptionManagement\Plan\Entities;
 
-use App\Domains\ManagementSubscriptions\Subscription\Entities\SubscriptionEntity;
+use App\Domains\SubscriptionManagement\Subscription\Entities\SubscriptionEntity;
 use App\Models\Plan;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 

@@ -2,9 +2,8 @@
 
 namespace App\Domains\VideoManagement\Category\Entities;
 
-use App\Domains\Catalog\Entities\CatalogEntity;
+use App\Domains\VideoCatalog\Catalog\Entities\CatalogEntity;
 use App\Domains\VideoManagement\Video\Entities\VideoEntity;
-use App\Models\Catalog;
 use App\Models\Category;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;

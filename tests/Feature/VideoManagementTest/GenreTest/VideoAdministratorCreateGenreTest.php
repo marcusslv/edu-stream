@@ -2,7 +2,7 @@
 
 namespace Tests\Feature\VideoManagementTest\GenreTest;
 
-use App\Domains\Enums\RolesEnum;
+use App\Domains\User\Enums\RolesEnum;
 use App\Events\GenreCreated;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;

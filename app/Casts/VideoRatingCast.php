@@ -2,7 +2,7 @@
 
 namespace App\Casts;
 
-use App\Domains\Enums\VideoRatingEnum;
+use App\Domains\VideoManagement\Enums\VideoRatingEnum;
 use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
 use Illuminate\Database\Eloquent\Model;
 

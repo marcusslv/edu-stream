@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Domains\ManagementSubscriptions\Subscription\Repositories;
+namespace App\Domains\SubscriptionManagement\Subscription\Repositories;
 
 use App\Domains\Abstracts\AbstractRepository;
-use App\Domains\ManagementSubscriptions\Subscription\Entities\SubscriptionEntity;
+use App\Domains\SubscriptionManagement\Subscription\Entities\SubscriptionEntity;
 
 class SubscriptionRepository extends AbstractRepository
 {

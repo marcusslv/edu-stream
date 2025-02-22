@@ -2,7 +2,7 @@
 
 namespace App\Domains\VideoManagement\Genre\Entities;
 
-use App\Domains\Catalog\Entities\CatalogEntity;
+use App\Domains\VideoCatalog\Catalog\Entities\CatalogEntity;
 use App\Domains\VideoManagement\Video\Entities\VideoEntity;
 use App\Models\Genre;
 use Illuminate\Database\Eloquent\Relations\HasMany;

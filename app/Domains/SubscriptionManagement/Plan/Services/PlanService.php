@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Domains\ManagementSubscriptions\Plan\Services;
+namespace App\Domains\SubscriptionManagement\Plan\Services;
 
 use App\Domains\Abstracts\AbstractService;
-use App\Domains\ManagementSubscriptions\Plan\Repositories\PlanRepository;
+use App\Domains\SubscriptionManagement\Plan\Repositories\PlanRepository;
 use App\Events\PlanCreated;
 
 class PlanService extends AbstractService

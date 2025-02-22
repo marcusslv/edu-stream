@@ -2,7 +2,7 @@
 
 namespace Tests\Feature\VideoManagementTest\CastMemberTest;
 
-use App\Domains\Enums\RolesEnum;
+use App\Domains\User\Enums\RolesEnum;
 use App\Events\CastMemberCreated;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;

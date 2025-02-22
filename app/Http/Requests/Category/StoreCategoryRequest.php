@@ -2,10 +2,8 @@
 
 namespace App\Http\Requests\Category;
 
-use App\Domains\Enums\RolesEnum;
+use App\Domains\User\Enums\RolesEnum;
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Gate;
 
 class StoreCategoryRequest extends FormRequest
 {

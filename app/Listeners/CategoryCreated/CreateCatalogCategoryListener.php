@@ -2,7 +2,7 @@
 
 namespace App\Listeners\CategoryCreated;
 
-use App\Domains\Catalog\Services\CatalogService;
+use App\Domains\VideoCatalog\Catalog\Services\CatalogService;
 use App\Domains\VideoManagement\Category\Entities\CategoryEntity;
 use App\Events\CategoryCreated;
 

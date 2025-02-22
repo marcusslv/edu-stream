@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Domains\ManagementSubscriptions\Subscription\Entities;
+namespace App\Domains\SubscriptionManagement\Subscription\Entities;
 
-use App\Domains\ManagementSubscriptions\Plan\Entities\PlanEntity;
+use App\Domains\SubscriptionManagement\Plan\Entities\PlanEntity;
 use App\Domains\User\Entities\UserEntity;
 use App\Models\Subscription;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;

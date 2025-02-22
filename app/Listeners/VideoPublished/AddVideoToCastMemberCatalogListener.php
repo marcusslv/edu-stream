@@ -2,10 +2,8 @@
 
 namespace App\Listeners\VideoPublished;
 
-use App\Domains\Catalog\Services\CatalogService;
+use App\Domains\VideoCatalog\Catalog\Services\CatalogService;
 use App\Events\VideoPublished;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Queue\InteractsWithQueue;
 
 class AddVideoToCastMemberCatalogListener
 {

@@ -2,8 +2,8 @@
 
 namespace Tests\Feature\VideoManagementTest\VideoTest;
 
-use App\Domains\Enums\RolesEnum;
-use App\Domains\Enums\VideoRatingEnum;
+use App\Domains\User\Enums\RolesEnum;
+use App\Domains\VideoManagement\Enums\VideoRatingEnum;
 use App\Events\VideoCreated;
 use App\Models\Category;
 use App\Models\Genre;

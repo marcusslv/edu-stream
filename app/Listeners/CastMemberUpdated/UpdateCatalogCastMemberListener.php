@@ -3,7 +3,7 @@
 namespace App\Listeners\CastMemberUpdated;
 
 
-use App\Domains\Catalog\Services\CatalogService;
+use App\Domains\VideoCatalog\Catalog\Services\CatalogService;
 use App\Events\CastMemberUpdated;
 
 class UpdateCatalogCastMemberListener

@@ -2,7 +2,7 @@
 
 namespace App\Listeners\GenreCreated;
 
-use App\Domains\Catalog\Services\CatalogService;
+use App\Domains\VideoCatalog\Catalog\Services\CatalogService;
 use App\Domains\VideoManagement\Genre\Entities\GenreEntity;
 use App\Events\GenreCreated;
 

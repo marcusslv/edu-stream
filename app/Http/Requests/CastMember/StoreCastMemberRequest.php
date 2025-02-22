@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests\CastMember;
 
-use App\Domains\Enums\RolesEnum;
+use App\Domains\User\Enums\RolesEnum;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreCastMemberRequest extends FormRequest

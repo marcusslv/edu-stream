@@ -2,7 +2,7 @@
 
 namespace App\Listeners\CastMemberCreated;
 
-use App\Domains\Catalog\Services\CatalogService;
+use App\Domains\VideoCatalog\Catalog\Services\CatalogService;
 use App\Domains\VideoManagement\CastMember\Entities\CastMemberEntity;
 use App\Events\CastMemberCreated;
 

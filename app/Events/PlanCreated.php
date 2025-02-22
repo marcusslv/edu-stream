@@ -2,7 +2,7 @@
 
 namespace App\Events;
 
-use App\Domains\ManagementSubscriptions\Plan\Entities\PlanEntity;
+use App\Domains\SubscriptionManagement\Plan\Entities\PlanEntity;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Foundation\Events\Dispatchable;

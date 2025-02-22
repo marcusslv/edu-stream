@@ -2,7 +2,7 @@
 
 namespace App\Listeners\GenreUpdated;
 
-use App\Domains\Catalog\Services\CatalogService;
+use App\Domains\VideoCatalog\Catalog\Services\CatalogService;
 use App\Domains\VideoManagement\Genre\Entities\GenreEntity;
 use App\Events\GenreUpdated;
 

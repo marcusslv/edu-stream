@@ -2,12 +2,12 @@
 
 namespace Tests\Unit\VideoManagementTest;
 
-use App\Domains\Enums\CastMemberRoleEnum;
 use App\Domains\VideoManagement\CastMember\Entities\CastMemberEntity;
 use App\Domains\VideoManagement\CastMember\Repositories\CastMemberRepository;
 use App\Domains\VideoManagement\CastMember\Services\CastMemberService;
-use PHPUnit\Framework\TestCase;
+use App\Domains\VideoManagement\Enums\CastMemberRoleEnum;
 use Mockery;
+use PHPUnit\Framework\TestCase;
 
 class CastMemberTest extends TestCase
 {

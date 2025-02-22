@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Domains\Catalog\Services;
+namespace App\Domains\VideoCatalog\Catalog\Services;
 
 use App\Domains\Abstracts\AbstractService;
-use App\Domains\Catalog\Entities\CatalogEntity;
-use App\Domains\Catalog\Repositories\CatalogRepository;
+use App\Domains\VideoCatalog\Catalog\Entities\CatalogEntity;
+use App\Domains\VideoCatalog\Catalog\Repositories\CatalogRepository;
 use App\Domains\VideoManagement\Video\Entities\VideoEntity;
 
 class CatalogService extends AbstractService
