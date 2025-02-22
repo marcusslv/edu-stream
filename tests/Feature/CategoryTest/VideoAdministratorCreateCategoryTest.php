@@ -107,7 +107,7 @@ class VideoAdministratorCreateCategoryTest extends TestCase
         Event::assertDispatched(CategoryCreated::class);
     }
 
-    public function test_if_video_administrator_can_create_category_with_invalid_data(): void
+    public function test_if_video_administrator_cannot_create_category_with_invalid_data(): void
     {
         // Arrange
         Event::fake();

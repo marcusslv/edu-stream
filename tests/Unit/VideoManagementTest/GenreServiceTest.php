@@ -10,9 +10,6 @@ use Mockery;
 
 class GenreServiceTest extends TestCase
 {
-    /**
-     * A basic unit test example.
-     */
     public function test_if_create_genre_with_success(): void
     {
         // Arrange

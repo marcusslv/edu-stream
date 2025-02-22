@@ -133,7 +133,7 @@ class VideoAdministratorCreateGenreTest extends TestCase
             'show' => false
         ]);
 
-        $this->assertDatabaseMissing('categories', [
+        $this->assertDatabaseMissing('genres', [
             'name' => 'Genre Test',
             'description' => 'Description Test'
         ]);

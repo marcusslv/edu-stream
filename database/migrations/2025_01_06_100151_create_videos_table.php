@@ -18,7 +18,7 @@ return new class extends Migration
             $table->integer('duration');
             $table->date('release_date');
             $table->string('rating');
-            $table->boolean('is_published')->default(false);
+            $table->boolean('is_published');
             $table->foreignId('category_id')->constrained('categories');
             $table->foreignId('genre_id')->constrained('genres');
             $table->timestamps();

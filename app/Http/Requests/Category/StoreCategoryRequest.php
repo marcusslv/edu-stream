@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests\Category;
 
+use App\Domains\Enums\RolesEnum;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
@@ -13,7 +14,7 @@ class StoreCategoryRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return true;
+        return auth()->user()->hasRole(RolesEnum::VIDEO_ADMINISTRATOR->value);
     }
 
     /**

@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests\Genre;
 
+use App\Domains\Enums\RolesEnum;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreGenreRequest extends FormRequest
@@ -11,7 +12,7 @@ class StoreGenreRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return true;
+        return auth()->user()->hasRole(RolesEnum::VIDEO_ADMINISTRATOR->value);
     }
 
     /**

@@ -2,6 +2,7 @@
 
 namespace App\Domains\VideoManagement\Video\Entities;
 
+use App\Casts\VideoRatingCast;
 use App\Domains\VideoManagement\CastMember\Entities\CastMemberEntity;
 use App\Domains\VideoManagement\Category\Entities\CategoryEntity;
 use App\Domains\VideoManagement\Genre\Entities\GenreEntity;
@@ -41,6 +42,10 @@ class VideoEntity extends Video
         'is_published',
         'category_id',
         'genre_id'
+    ];
+
+    protected $casts = [
+        'rating' => VideoRatingCast::class
     ];
 
     public function category(): BelongsTo
