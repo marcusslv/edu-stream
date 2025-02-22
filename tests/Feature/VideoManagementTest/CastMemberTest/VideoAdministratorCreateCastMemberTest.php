@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature\CastMemberTest;
+namespace Tests\Feature\VideoManagementTest\CastMemberTest;
 
 use App\Domains\Enums\RolesEnum;
 use App\Events\CastMemberCreated;

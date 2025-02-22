@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature\GenreTest;
+namespace Tests\Feature\VideoManagementTest\GenreTest;
 
 use App\Domains\Enums\RolesEnum;
 use App\Events\GenreCreated;

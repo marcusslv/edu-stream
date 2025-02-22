@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature\VideoTest;
+namespace Tests\Feature\VideoManagementTest\VideoTest;
 
 use App\Domains\Enums\RolesEnum;
 use App\Domains\Enums\VideoRatingEnum;

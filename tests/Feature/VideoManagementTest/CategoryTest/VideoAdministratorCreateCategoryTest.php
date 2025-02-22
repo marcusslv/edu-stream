@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature\CategoryTest;
+namespace Tests\Feature\VideoManagementTest\CategoryTest;
 
 use App\Domains\Enums\RolesEnum;
 use App\Events\CategoryCreated;
