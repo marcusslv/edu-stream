@@ -4,7 +4,7 @@ namespace App\Domains\SubscriptionManagement\Subscription\Entities;
 
 use App\Domains\SubscriptionManagement\Plan\Entities\PlanEntity;
 use App\Domains\User\Entities\UserEntity;
-use App\Models\Subscription;
+use App\Models\SubscriptionManagement\Subscription\Subscription;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**

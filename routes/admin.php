@@ -1,7 +1,8 @@
 <?php
+
+use App\Http\Controllers\VideoManagement\CastMember\CastMemberController;
 use App\Http\Controllers\VideoManagement\Category\CategoryController;
 use App\Http\Controllers\VideoManagement\Genre\GenreController;
-use App\Http\Controllers\CastMember\CastMemberController;
 use App\Http\Controllers\VideoManagement\Video\VideoController;
 use Illuminate\Support\Facades\Route;
 

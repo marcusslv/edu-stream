@@ -4,7 +4,7 @@ namespace App\Domains\SubscriptionManagement\Subscription\Services;
 
 use App\Domains\Abstracts\AbstractService;
 use App\Domains\SubscriptionManagement\Subscription\Repositories\SubscriptionRepository;
-use App\Events\SubscriptionStarted;
+use App\Events\SubscriptionManagement\SubscriptionStarted;
 
 class SubscriptionService extends AbstractService
 {

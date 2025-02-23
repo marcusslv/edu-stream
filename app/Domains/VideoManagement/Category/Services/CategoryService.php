@@ -4,8 +4,8 @@ namespace App\Domains\VideoManagement\Category\Services;
 
 use App\Domains\Abstracts\AbstractService;
 use App\Domains\VideoManagement\Category\Repositories\CategoryRepository;
-use App\Events\CategoryCreated;
-use App\Events\CategoryUpdated;
+use App\Events\VideoManagement\Category\CategoryCreated;
+use App\Events\VideoManagement\Category\CategoryUpdated;
 
 
 class CategoryService extends AbstractService

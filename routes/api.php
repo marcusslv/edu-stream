@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\Catalog\CatalogController;
 use App\Http\Controllers\User\AuthController;
+use App\Http\Controllers\VideoCatalog\Catalog\CatalogController;
 use Illuminate\Support\Facades\Route;
 
 

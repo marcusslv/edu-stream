@@ -2,7 +2,7 @@
 
 namespace App\Domains\VideoManagement\Video\Entities;
 
-use App\Models\VideoFiles;
+use App\Models\VideoManagement\Video\VideoFiles;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**

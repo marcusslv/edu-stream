@@ -2,11 +2,11 @@
 
 namespace App\Domains\VideoManagement\Video\Entities;
 
-use App\Casts\VideoRatingCast;
-use App\Domains\VideoManagement\CastMember\Entities\CastMemberEntity;
+use App\Casts\VideoManagement\Video\VideoRatingCast;
+use App\Domains\VideoManagement\CastMember\Entities\CastMember\Entities\CastMemberEntity;
 use App\Domains\VideoManagement\Category\Entities\CategoryEntity;
 use App\Domains\VideoManagement\Genre\Entities\GenreEntity;
-use App\Models\Video;
+use App\Models\VideoManagement\Video\Video;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;

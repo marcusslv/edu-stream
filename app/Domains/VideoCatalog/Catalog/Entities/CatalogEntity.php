@@ -3,7 +3,7 @@
 namespace App\Domains\VideoCatalog\Catalog\Entities;
 
 use App\Domains\VideoManagement\Video\Entities\VideoEntity;
-use App\Models\Catalog;
+use App\Models\VideoCatalog\Catalog\Catalog;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 

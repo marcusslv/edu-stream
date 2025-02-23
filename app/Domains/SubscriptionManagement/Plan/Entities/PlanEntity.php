@@ -3,7 +3,7 @@
 namespace App\Domains\SubscriptionManagement\Plan\Entities;
 
 use App\Domains\SubscriptionManagement\Subscription\Entities\SubscriptionEntity;
-use App\Models\Plan;
+use App\Models\SubscriptionManagement\Plan\Plan;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**

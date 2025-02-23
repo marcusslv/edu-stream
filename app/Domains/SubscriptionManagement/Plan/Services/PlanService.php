@@ -4,7 +4,7 @@ namespace App\Domains\SubscriptionManagement\Plan\Services;
 
 use App\Domains\Abstracts\AbstractService;
 use App\Domains\SubscriptionManagement\Plan\Repositories\PlanRepository;
-use App\Events\PlanCreated;
+use App\Events\SubscriptionManagement\PlanCreated;
 
 class PlanService extends AbstractService
 {

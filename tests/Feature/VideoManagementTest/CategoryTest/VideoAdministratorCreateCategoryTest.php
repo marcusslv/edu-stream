@@ -3,8 +3,8 @@
 namespace Tests\Feature\VideoManagementTest\CategoryTest;
 
 use App\Domains\User\Enums\RolesEnum;
-use App\Events\CategoryCreated;
-use App\Models\User;
+use App\Events\VideoManagement\Category\CategoryCreated;
+use App\Models\User\User;
 use Database\Seeders\RolesSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;

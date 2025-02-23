@@ -4,8 +4,8 @@ namespace App\Domains\VideoManagement\Genre\Services;
 
 use App\Domains\Abstracts\AbstractService;
 use App\Domains\VideoManagement\Genre\Repositories\GenreRepository;
-use App\Events\GenreCreated;
-use App\Events\GenreUpdated;
+use App\Events\VideoManagement\Genre\GenreCreated;
+use App\Events\VideoManagement\Genre\GenreUpdated;
 
 class GenreService extends AbstractService
 {

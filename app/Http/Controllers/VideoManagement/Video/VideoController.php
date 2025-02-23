@@ -5,7 +5,7 @@ namespace App\Http\Controllers\VideoManagement\Video;
 
 use App\Domains\VideoManagement\Video\Services\VideoService;
 use App\Http\Controllers\AbstractController;
-use App\Http\Requests\Video\StoreVideoRequest;
+use App\Http\Requests\VideoManagement\Video\StoreVideoRequest;
 
 
 class VideoController extends AbstractController

@@ -6,9 +6,9 @@ use App\Domains\Abstracts\AbstractService;
 use App\Domains\VideoManagement\Video\Entities\VideoEntity;
 use App\Domains\VideoManagement\Video\Entities\VideoFileEntity;
 use App\Domains\VideoManagement\Video\Repositories\VideoRepository;
-use App\Events\VideoCreated;
-use App\Events\VideoPublished;
-use App\Events\VideoUploadCompleted;
+use App\Events\VideoManagement\Video\VideoCreated;
+use App\Events\VideoManagement\Video\VideoPublished;
+use App\Events\VideoManagement\Video\VideoUploadCompleted;
 use Illuminate\Http\File;
 use Illuminate\Support\Facades\Storage;
 

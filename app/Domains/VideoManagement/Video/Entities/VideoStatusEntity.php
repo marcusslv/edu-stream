@@ -2,7 +2,7 @@
 
 namespace App\Domains\VideoManagement\Video\Entities;
 
-use App\Models\VideoStatus;
+use App\Models\VideoManagement\Video\VideoStatus;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class VideoStatusEntity extends VideoStatus

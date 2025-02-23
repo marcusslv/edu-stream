@@ -4,10 +4,10 @@ namespace Tests\Feature\VideoManagementTest\VideoTest;
 
 use App\Domains\User\Enums\RolesEnum;
 use App\Domains\VideoManagement\Enums\VideoRatingEnum;
-use App\Events\VideoCreated;
-use App\Models\Category;
-use App\Models\Genre;
-use App\Models\User;
+use App\Events\VideoManagement\Video\VideoCreated;
+use App\Models\User\User;
+use App\Models\VideoManagement\Category\Category;
+use App\Models\VideoManagement\Genre\Genre;
 use Database\Seeders\RolesSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
