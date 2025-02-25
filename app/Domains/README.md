@@ -1,7 +1,4 @@
-
-
-
-# App\Domains
+# Domains
 
 Este diretório contém a lógica específica do domínio para a aplicação. Cada domínio é organizado em subdiretórios para 
 contextos, agregados, entidades, repositórios, serviços e objetos de valor.
