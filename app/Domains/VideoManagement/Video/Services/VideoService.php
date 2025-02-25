@@ -49,6 +49,17 @@ class VideoService extends AbstractService
        return $videoFileEntity;
     }
 
+    public function beforeUpdate($id, array $data): array
+    {
+        $entity = $this->find($id);
+
+        if (!!$entity?->is_published && !!data_get($data, 'is_published')) {
+            unset($data['is_published']);
+        }
+
+        return $data;
+    }
+
     public function afterUpdate($entity, array $params): void
     {
         if (!!$entity->is_published && data_get($params, 'is_published') === true) {
