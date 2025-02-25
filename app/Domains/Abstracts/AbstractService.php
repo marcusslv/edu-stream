@@ -88,14 +88,18 @@ abstract class AbstractService implements ServiceInterface
 	public function update($id, array $data)
 	{
 		$data = $this->beforeUpdate($id, $data);
-		$this->validateOnUpdate($id, $data);
-		$entity = $this->find($id);
-		$this->afterUpdate($entity, $data);
-		return $this->repository->update($entity, $data);
+
+        if ($this->validateOnUpdate($id, $data)) {
+            $entity = $this->find($id);
+            $this->repository->update($entity, $data);
+
+            return $this->afterUpdate($entity, $data);
+        }
 	}
 
 	public function afterUpdate($entity, array $params)
 	{
+        return $entity;
 	}
 
 	/**

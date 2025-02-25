@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Plan extends Model
 {
-    /** @use HasFactory<\Database\Factories\SubscriptionManagement\PlanFactory> */
+    /** @use HasFactory<\Database\Factories\SubscriptionManagement\Plan\PlanFactory> */
     use HasFactory;
 }

@@ -1,13 +1,13 @@
 <?php
 
-namespace Database\Factories\VideoManagement;
+namespace Database\Factories\SubscriptionManagement\Plan;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\VideoManagement\Video\Video>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\SubscriptionManagement\Plan\Plan>
  */
-class VideoFactory extends Factory
+class PlanFactory extends Factory
 {
     /**
      * Define the model's default state.

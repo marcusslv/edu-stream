@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class CastMember extends Model
 {
-    /** @use HasFactory<\Database\Factories\VideoManagement\CastMemberFactory> */
+    /** @use HasFactory<\Database\Factories\VideoManagement\CastMember\CastMemberFactory> */
     use HasFactory;
 }

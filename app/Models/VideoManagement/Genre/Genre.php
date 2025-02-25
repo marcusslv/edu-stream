@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Genre extends Model
 {
-    /** @use HasFactory<\Database\Factories\VideoManagement\GenreFactory> */
+    /** @use HasFactory<\Database\Factories\VideoManagement\Genre\GenreFactory> */
     use HasFactory;
 }

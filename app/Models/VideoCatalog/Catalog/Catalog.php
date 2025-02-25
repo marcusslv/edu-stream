@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Catalog extends Model
 {
-    /** @use HasFactory<\Database\Factories\VideoCatalog\CatalogFactory> */
+    /** @use HasFactory<\Database\Factories\VideoCatalog\Catalog\CatalogFactory> */
     use HasFactory;
 }

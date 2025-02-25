@@ -49,16 +49,10 @@ class VideoService extends AbstractService
        return $videoFileEntity;
     }
 
-    public function publishVideo(VideoEntity $entity, array $params): bool
+    public function afterUpdate($entity, array $params): void
     {
-        $result = $this->repository->update($entity, ['is_published' => true]);
-
-        if (!$result) {
-            throw new \Exception('Failed to publish video');
+        if (!!$entity->is_published && data_get($params, 'is_published') === true) {
+            event(new VideoPublished($entity));
         }
-
-        event(new VideoPublished($entity));
-
-        return $result;
     }
 }
