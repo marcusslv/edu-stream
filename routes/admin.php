@@ -15,6 +15,11 @@ Route::apiResource('genres', GenreController::class, [
 Route::apiResource('cast-members', CastMemberController::class, [
     'middleware' => ['auth:sanctum', 'role:video_administrator']
 ]);
+
 Route::apiResource('videos', VideoController::class, [
     'middleware' => ['role:video_administrator']
 ]);
+
+Route::post('videos/{video}/upload', [VideoController::class, 'upload'])
+    ->middleware('role:video_administrator')
+    ->name('videos.upload');

@@ -3,11 +3,11 @@
 namespace App\Domains\VideoManagement\Video\Services;
 
 use App\Domains\Abstracts\AbstractService;
-use App\Domains\VideoManagement\Video\Repositories\VideoRepository;
+use App\Domains\VideoManagement\Video\Repositories\VideoFileRepository;
 
 class VideoFileService extends AbstractService
 {
-    public function __construct(VideoRepository $repository)
+    public function __construct(VideoFileRepository $repository)
     {
         $this->repository = $repository;
     }
