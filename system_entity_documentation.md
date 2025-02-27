@@ -114,3 +114,17 @@
 | payment_details | Payment details associated              | Credit card ending in 1234   |
 | started_at      | Subscription start timestamp            | 2023-01-01                   |
 | ended_at        | Subscription end timestamp (optional)   | N/A                          |
+
+### Subscription Status (Status da Assinatura)
+
+| Status       | Description                                                                 |
+|:-------------|:----------------------------------------------------------------------------|
+| Active       | The subscription is currently active and the user has access to the services.|
+| Inactive     | The subscription is not active, possibly due to non-payment or user cancellation.|
+| Pending      | The subscription is awaiting confirmation or payment.                       |
+| Cancelled    | The subscription has been cancelled by the user or the system.              |
+| Expired      | The subscription has reached its end date and is no longer active.          |
+| Suspended    | The subscription is temporarily suspended, possibly due to issues like payment failure.|
+| Renewed      | The subscription has been renewed for another term.                         |
+| Trial        | The subscription is in a trial period.                                      |
+| Grace Period | The subscription is in a grace period after the end date, allowing the user to renew without losing access immediately.|

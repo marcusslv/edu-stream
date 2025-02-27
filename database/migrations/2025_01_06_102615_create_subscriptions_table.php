@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users');
             $table->foreignId('plan_id')->constrained('plans');
-            $table->string('status');
             $table->text('payment_details')->nullable();
             $table->timestamp('started_at');
             $table->timestamp('ended_at')->nullable();

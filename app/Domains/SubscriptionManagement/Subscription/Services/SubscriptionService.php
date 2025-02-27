@@ -13,6 +13,13 @@ class SubscriptionService extends AbstractService
         $this->repository = $repository;
     }
 
+    public function beforeSave(array $data): array
+    {
+        $data['started_at'] = data_get($data, 'started_at', now()->format('Y-m-d H:i:s'));
+
+        return $data;
+    }
+
     public function afterSave($entity, $params)
     {
         event(new SubscriptionStarted($entity, $params));
