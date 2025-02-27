@@ -4,6 +4,7 @@ use App\Http\Controllers\VideoManagement\CastMember\CastMemberController;
 use App\Http\Controllers\VideoManagement\Category\CategoryController;
 use App\Http\Controllers\VideoManagement\Genre\GenreController;
 use App\Http\Controllers\VideoManagement\Video\VideoController;
+use App\Http\Controllers\SubscriptionManagement\Plan\PlanController;
 use Illuminate\Support\Facades\Route;
 
 Route::apiResource('categories', CategoryController::class, [
@@ -23,3 +24,7 @@ Route::apiResource('videos', VideoController::class, [
 Route::post('videos/{video}/upload', [VideoController::class, 'upload'])
     ->middleware('role:video_administrator')
     ->name('videos.upload');
+
+Route::apiResource('plans', PlanController::class, [
+    'middleware' => ['role:subscription_administrator']
+]);

@@ -17,7 +17,11 @@ class PlanFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            "name" => fake()->name,
+            "description" => fake()->sentence(),
+            "price" => 1000,
+            "duration" =>  1,
+            "features" => fake()->randomElement(['HD', '4 screens'])
         ];
     }
 }
