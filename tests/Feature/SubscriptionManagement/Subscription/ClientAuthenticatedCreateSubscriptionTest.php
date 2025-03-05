@@ -11,7 +11,7 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Support\Facades\Event;
 use Tests\TestCase;
 
-class SubscriptionAdministratorCreateSubscriptionTest extends TestCase
+class ClientAuthenticatedCreateSubscriptionTest extends TestCase
 {
     use RefreshDatabase, WithFaker;
 
@@ -22,7 +22,7 @@ class SubscriptionAdministratorCreateSubscriptionTest extends TestCase
         $this->seed(RolesSeeder::class);
     }
 
-    public function test_if_authenticated_user_can_create_subscription(): void
+    public function test_if_authenticated_client_can_create_subscription(): void
     {
         Event::fake();
         $user = User::factory()->create();
@@ -55,7 +55,7 @@ class SubscriptionAdministratorCreateSubscriptionTest extends TestCase
 
         Event::assertDispatched(SubscriptionStarted::class);
     }
-    public function test_if_authenticated_user_cannot_create_subscription_with_invalid_data(): void
+    public function test_if_authenticated_client_cannot_create_subscription_with_invalid_data(): void
     {
         Event::fake();
         $user = User::factory()->create();
@@ -88,7 +88,7 @@ class SubscriptionAdministratorCreateSubscriptionTest extends TestCase
         Event::assertNotDispatched(SubscriptionStarted::class);
     }
 
-    public function test_if_unauthenticated_user_cannot_create_subscription(): void
+    public function test_if_unauthenticated_client_cannot_create_subscription(): void
     {
         // Arrange
         Event::fake();
