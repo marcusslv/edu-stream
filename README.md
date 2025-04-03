@@ -48,8 +48,8 @@ A implementação deste projeto segue uma arquitetura orientada a eventos e enfa
 
 2. **Clone o repositório:**
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
-   cd nome-do-repositorio
+   git clone https://github.com/marcusslv/edu-stream.git
+   cd edu-stream
    ```
 
 3. **Criação e inicialização dos contêineres:**
@@ -76,8 +76,8 @@ A implementação deste projeto segue uma arquitetura orientada a eventos e enfa
 
 2. **Instalação:**
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
-   cd nome-do-repositorio
+   git clone https://github.com/marcusslv/edu-stream.git
+   cd edu-stream
    composer install
    ```
 
