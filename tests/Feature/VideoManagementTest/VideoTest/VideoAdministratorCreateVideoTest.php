@@ -2,6 +2,7 @@
 
 namespace Tests\Feature\VideoManagementTest\VideoTest;
 
+use App\Domains\User\Entities\UserEntity;
 use App\Domains\User\Enums\RolesEnum;
 use App\Domains\VideoManagement\Enums\VideoRatingEnum;
 use App\Events\VideoManagement\Video\VideoCreated;
@@ -31,7 +32,7 @@ class VideoAdministratorCreateVideoTest extends TestCase
         Event::fake();
         $category = Category::factory()->create();
         $genre = Genre::factory()->create();
-        $videoAdministrator = User::factory()->create();
+        $videoAdministrator = UserEntity::factory()->create();
         $videoAdministrator->assignRole(RolesEnum::VIDEO_ADMINISTRATOR->value);
         $videoAdministratorToken = $videoAdministrator->createToken('admin_token')->plainTextToken;
 

@@ -3,9 +3,10 @@
 namespace App\Domains\User\Entities;
 
 use App\Domains\SubscriptionManagement\Subscription\Entities\SubscriptionEntity;
-use App\Models\User\User;
+use Database\Factories\User\UserEntityFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
@@ -17,12 +18,12 @@ use Spatie\Permission\Traits\HasRoles;
  * @property string $email
  * @property string $password
  */
-class UserEntity extends User
+class UserEntity extends Authenticatable
 {
-    /** @use HasFactory<\Database\Factories\UserEntityFactory> */
     use HasFactory, Notifiable, HasRoles, HasApiTokens;
 
     protected $table = 'users';
+    protected $guard_name = 'api';
 
     protected $fillable = [
         'name',
@@ -35,6 +36,21 @@ class UserEntity extends User
         'password',
         'remember_token',
     ];
+
+    protected function casts(): array
+    {
+        return [
+            'email_verified_at' => 'datetime',
+            'password' => 'hashed',
+        ];
+    }
+
+    protected static function newFactory(): UserEntityFactory
+    {
+        $class = UserEntityFactory::class;
+
+        return $class::new();
+    }
 
     public function subscriptions(): HasMany
     {

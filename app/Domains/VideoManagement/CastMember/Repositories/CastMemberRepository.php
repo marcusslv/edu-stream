@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Domains\VideoManagement\CastMember\Entities\CastMember\Repositories;
+namespace App\Domains\VideoManagement\CastMember\Repositories;
 
 use App\Domains\Abstracts\AbstractRepository;
-use App\Domains\VideoManagement\CastMember\Entities\CastMember\Entities\CastMemberEntity;
+use App\Domains\VideoManagement\CastMember\Entities\CastMemberEntity;
 
 class CastMemberRepository extends AbstractRepository
 {

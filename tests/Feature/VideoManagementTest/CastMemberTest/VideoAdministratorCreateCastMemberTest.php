@@ -46,7 +46,6 @@ class VideoAdministratorCreateCastMemberTest extends TestCase
             'message' => 'Operação realizada com com sucesso',
             'show' => true,
             'response' => [
-                'id' => 1,
                 "name" => "Member Test",
                 "role" => [
                     'value' => 'actor',

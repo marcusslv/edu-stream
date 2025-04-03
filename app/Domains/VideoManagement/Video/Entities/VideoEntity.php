@@ -3,13 +3,14 @@
 namespace App\Domains\VideoManagement\Video\Entities;
 
 use App\Casts\VideoManagement\Video\VideoRatingCast;
-use App\Domains\VideoManagement\CastMember\Entities\CastMember\Entities\CastMemberEntity;
+use App\Domains\Abstracts\AbstractEntity;
+use App\Domains\VideoManagement\CastMember\Entities\CastMemberEntity;
 use App\Domains\VideoManagement\Category\Entities\CategoryEntity;
 use App\Domains\VideoManagement\Genre\Entities\GenreEntity;
 use App\Models\VideoManagement\Video\Video;
+use Database\Factories\VideoManagement\Video\VideoEntityFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * Class VideoEntity
@@ -29,7 +30,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property CastMemberEntity[] $castMembers
  * @property VideoFileEntity[] $videoFiles
  */
-class VideoEntity extends Video
+class VideoEntity extends AbstractEntity
 {
     protected $table = 'videos';
 
@@ -45,8 +46,20 @@ class VideoEntity extends Video
     ];
 
     protected $casts = [
-        'rating' => VideoRatingCast::class
+        'rating' => VideoRatingCast::class,
+        'is_published' => 'boolean'
     ];
+
+    protected $hidden = [
+        'category_id',
+        'genre_id',
+        'updated_at'
+    ];
+
+    protected static function getClassFactory(): string
+    {
+        return VideoEntityFactory::class;
+    }
 
     public function category(): BelongsTo
     {
@@ -63,9 +76,9 @@ class VideoEntity extends Video
         return $this->belongsToMany(CastMemberEntity::class, 'video_cast_members', 'video_id', 'cast_member_id');
     }
 
-    public function videoFiles(): HasMany
+    public function videoFile(): BelongsTo
     {
-        return $this->hasMany(VideoFileEntity::class, 'video_id', 'id');
+        return $this->belongsTo(VideoFileEntity::class, 'video_id', 'id');
     }
 
     public function status(): BelongsTo

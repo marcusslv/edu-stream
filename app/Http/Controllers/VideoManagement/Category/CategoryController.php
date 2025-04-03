@@ -5,6 +5,7 @@ namespace App\Http\Controllers\VideoManagement\Category;
 use App\Domains\VideoManagement\Category\Services\CategoryService;
 use App\Http\Controllers\AbstractController;
 use App\Http\Requests\VideoManagement\Category\StoreCategoryRequest;
+use Illuminate\Support\Facades\Storage;
 
 
 class CategoryController extends AbstractController

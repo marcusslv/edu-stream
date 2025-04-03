@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Domains\VideoManagement\CastMember\Entities\CastMember\Services;
+namespace App\Domains\VideoManagement\CastMember\Services;
 
 use App\Domains\Abstracts\AbstractService;
-use App\Domains\VideoManagement\CastMember\Entities\CastMember\Repositories\CastMemberRepository;
+use App\Domains\VideoManagement\CastMember\Repositories\CastMemberRepository;
 use App\Events\VideoManagement\CastMember\CastMemberCreated;
 use App\Events\VideoManagement\CastMember\CastMemberUpdated;
 

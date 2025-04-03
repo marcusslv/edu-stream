@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\VideoManagement\CastMember;
 
-use App\Domains\VideoManagement\CastMember\Entities\CastMember\Services\CastMemberService;
+use App\Domains\VideoManagement\CastMember\Services\CastMemberService;
 use App\Http\Controllers\AbstractController;
 use App\Http\Requests\VideoManagement\CastMember\StoreCastMemberRequest;
 

@@ -3,7 +3,7 @@
 namespace App\Listeners\VideoManagement\CastMember\CastMemberCreated;
 
 use App\Domains\VideoCatalog\Catalog\Services\CatalogService;
-use App\Domains\VideoManagement\CastMember\Entities\CastMember\Entities\CastMemberEntity;
+use App\Domains\VideoManagement\CastMember\Entities\CastMemberEntity;
 use App\Events\VideoManagement\CastMember\CastMemberCreated;
 
 class CreateCatalogCastMemberListener

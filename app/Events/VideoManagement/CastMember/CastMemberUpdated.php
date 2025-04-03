@@ -2,7 +2,7 @@
 
 namespace App\Events\VideoManagement\CastMember;
 
-use App\Domains\VideoManagement\CastMember\Entities\CastMember\Entities\CastMemberEntity;
+use App\Domains\VideoManagement\CastMember\Entities\CastMemberEntity;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
